@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+<head>
+    <title>Charts</title>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <script src="./Chart.bundle.js"></script>
+    <script type="text/javascript">
+    $(function() {
+        $.get('./data.json', function(data) {
+            var ctx = document.getElementById("canvas").getContext("2d");
+            window.myChart = new Chart(ctx, data);
+        }).fail(function(err) {
+            console.log(err)
+            alert( "error" );
+        })
+    })
+    </script>
+    <style>
+    canvas {
+        -moz-user-select: none;
+        -webkit-user-select: none;
+        -ms-user-select: none;
+    }
+    </style>
+</head>
+
+<body>
+    <div id="container" style="width: 100%;">
+        <canvas id="canvas"></canvas>
+    </div>
+</body>
+
+</html>

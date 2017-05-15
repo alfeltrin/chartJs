@@ -1,0 +1,120 @@
+{
+    "type": "bar",
+    "options": {
+        "elements": {
+            "rectangle": {
+                "borderWidth": 2
+            }
+        },
+        "responsive": true,
+        "legend": {
+            "position": "right"
+        },
+        "title": {
+            "display": true,
+            "text": "Grafico"
+        },
+        "scales": {
+            "xAxes": [
+                {
+                    "display": true,
+                    "gridLines": {
+                        "display": true
+                    },
+                    "labels": {
+                        "show": true
+                    }
+                }
+            ],
+            "yAxes": [
+                {
+                    "type": "linear",
+                    "display": false,
+                    "position": "left",
+                    "id": "y1",
+                    "ticks": {
+                        "min": 0
+                    },
+                    "gridLines": {
+                        "display": false
+                    },
+                    "labels": {
+                        "show": true
+                    }
+                },
+                {
+                    "min": 0,
+                    "type": "linear",
+                    "display": false,
+                    "position": "right",
+                    "id": "y2",
+                    "ticks": {
+                        "min": 0
+                    },
+                    "gridLines": {
+                        "display": false
+                    },
+                    "labels": {
+                        "show": true
+                    }
+                }
+            ]
+        }
+    },
+    "data": {
+        "labels": [
+            "Gen",
+            "Feb",
+            "Mar",
+            "Apr",
+            "Mag",
+            "Giu",
+            "Lug",
+            "Ago"
+        ],
+        "datasets": [
+            {
+                "type": "bar",
+                "label": "Temperatura",
+                "data": [
+                    10,
+                    15,
+                    19,
+                    23,
+                    19,
+                    26,
+                    30,
+                    34
+                ],
+                "borderColor": "#EC932F",
+                "backgroundColor": "#EC932F",
+                "pointBorderColor": "#EC932F",
+                "pointBackgroundColor": "#EC932F",
+                "pointHoverBackgroundColor": "#EC932F",
+                "pointHoverBorderColor": "#EC932F",
+                "fill": false,
+                "yAxisID": "y1"
+            },
+            {
+                "type": "line",
+                "label": "Umidità",
+                "data": [
+                    45,
+                    48,
+                    57,
+                    52,
+                    65,
+                    57,
+                    52,
+                    50
+                ],
+                "backgroundColor": "#71B37C",
+                "borderColor": "#71B37C",
+                "hoverBackgroundColor": "#71B37C",
+                "hoverBorderColor": "#71B37C",
+                "fill": false,
+                "yAxisID": "y2"
+            }
+        ]
+    }
+}
